@@ -4,20 +4,18 @@ const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 // Configuration - Edit these values for your server
 const config = {
   server: {
-    host: 'localhost', // Change to your server IP
-    port: 25565,
-    version: '1.20.4' // Change to your server version
+    host: 'play.uniterra.asia', // Change to your server IP
+    version: '1.21.8' // Change to your server version
   },
   bot: {
-    username: 'AFKBot', // Change to your desired bot name
+    username: 'JustMan', // Change to your desired bot name
     auth: 'offline', // 'offline', 'microsoft', or 'mojang'
-    password: '', // Minecraft account password (if using premium auth)
-    authmePassword: 'change_this_password' // AuthMe password for /register and /login
+    authmePassword: 'RobotKilat$311' // AuthMe password for /register and /login
   },
   serverCommands: {
     enabled: true,
-    joinServer: '/server survival', // Command to join specific server AFTER AuthMe
-    delay: 3000 // Wait 3 seconds after AuthMe before sending server command
+    joinServer: '/afk', // Command to join specific server AFTER AuthMe
+    delay: 10000000 // Wait 3 seconds after AuthMe before sending server command
   },
   features: {
     autoReconnect: {
@@ -25,7 +23,7 @@ const config = {
       delay: 5000
     },
     movement: {
-      enabled: true,
+      enabled: false,
       coordinates: {
         x: 0, // Change to your desired AFK coordinates
         y: 64,
@@ -33,10 +31,10 @@ const config = {
       }
     },
     antiAFK: {
-      enabled: true,
-      jump: true,
+      enabled: false,
+      jump: false,
       sneak: false,
-      look: true,
+      look: false,
       interval: 30000 // 30 seconds
     },
     chatMessages: {
